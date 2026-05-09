@@ -1,0 +1,110 @@
+{
+  "bootIso": "2026-05-09T09-00-23-295Z",
+  "role": "v2",
+  "cycle": 4,
+  "ts": 1778317360674,
+  "cycleRecord": {
+    "cycle": 4,
+    "agentRole": "v2",
+    "startedAt": 1778317341105,
+    "endedAt": 1778317360673,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 1243,
+    "totalCostUsd": 0.005234,
+    "actionInvoked": {
+      "name": "v2-local-actions.fs_write",
+      "args": {
+        "path": "scratchpad/decision-log.md",
+        "content": "## 2024-06-01\\n\\nDecided to triage inbox as first action of the day to identify any urgent communications requiring CEO attention.\\n"
+      },
+      "resultSummary": "{\"ok\":true,\"sizeBytes\":132,\"ts\":1778317341559}"
+    },
+    "memoryWrites": 5,
+    "dataIngestEvents": 1
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 4,
+        "agentRole": "v2",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778317341281
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "7509a340-8450-4d8c-855d-e1f992b157e9",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778317341281
+      },
+      "ts": 1778317341281
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 1127,
+        "completionTokens": 116,
+        "cost": 0.001475,
+        "executionId": "7509a340-8450-4d8c-855d-e1f992b157e9",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T09:02:21.558Z"
+      },
+      "ts": 1778317341558
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "7509a340-8450-4d8c-855d-e1f992b157e9",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778317341558
+      },
+      "ts": 1778317341558
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "7509a340-8450-4d8c-855d-e1f992b157e9",
+        "state": "complete",
+        "result": {
+          "text": "\n{\n  \"action\": \"v2-local-actions.fs_write\",\n  \"args\": {\n    \"path\": \"scratchpad/decision-log.md\",\n    \"content\": \"## 2024-06-01\\\\n\\\\nDecided to triage inbox as first action of the day to identify any urgent communications requiring CEO attention.\\\\n\"\n  },\n  \"reasoning\": \"Record a decision to prioritize inbox triage, satisfying the daily inbox triage requirement and the per-cycle decision recording requirement via a single action that commits to the triage intent.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 1127,
+            "completionTokens": 116
+          }
+        },
+        "error": null
+      },
+      "ts": 1778317341558
+    },
+    {
+      "event": "adapter_tool_call",
+      "data": {
+        "agentRole": "v2",
+        "adapter": "v2-local-actions",
+        "tool": "fs_write",
+        "durationMs": 1,
+        "success": true
+      },
+      "ts": 1778317341559
+    }
+  ]
+}
