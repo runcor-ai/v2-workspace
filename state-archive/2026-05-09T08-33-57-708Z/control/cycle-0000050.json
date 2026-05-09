@@ -1,0 +1,108 @@
+{
+  "bootIso": "2026-05-09T08-33-57-708Z",
+  "role": "control",
+  "cycle": 50,
+  "ts": 1778316320099,
+  "cycleRecord": {
+    "cycle": 50,
+    "agentRole": "control",
+    "startedAt": 1778316319188,
+    "endedAt": 1778316320099,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 1054,
+    "totalCostUsd": 0.03497600000000001,
+    "actionInvoked": null,
+    "memoryWrites": 0,
+    "dataIngestEvents": 0
+  },
+  "events": [
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "control",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 928,
+        "completionTokens": 29,
+        "cost": 0.001015,
+        "executionId": "19222c98-c9d9-4afe-a4eb-6782186ca7cc",
+        "flowName": "naive-control-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T08:45:07.940Z"
+      },
+      "ts": 1778316307940
+    },
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 50,
+        "agentRole": "control",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778316319350
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "7c8291b0-e1c5-420d-83fe-1ccb4cb6e722",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778316319350
+      },
+      "ts": 1778316319350
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "control",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 990,
+        "completionTokens": 64,
+        "cost": 0.0011819999999999999,
+        "executionId": "7c8291b0-e1c5-420d-83fe-1ccb4cb6e722",
+        "flowName": "naive-control-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T08:45:20.097Z"
+      },
+      "ts": 1778316320097
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "7c8291b0-e1c5-420d-83fe-1ccb4cb6e722",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778316320097
+      },
+      "ts": 1778316320097
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "control",
+        "executionId": "7c8291b0-e1c5-420d-83fe-1ccb4cb6e722",
+        "state": "complete",
+        "result": {
+          "text": "We need to follow the specification. We must output JSON with action and payload and a short thought. We have no explicit goal, but we have drives: resource is dominant (0.10). We have an email config issue: email unconfigured. There are no conflict with instructions were given explicit instruction.",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 990,
+            "completionTokens": 64
+          }
+        },
+        "error": null
+      },
+      "ts": 1778316320098
+    }
+  ]
+}
