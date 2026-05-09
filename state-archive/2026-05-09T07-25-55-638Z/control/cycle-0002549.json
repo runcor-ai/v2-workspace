@@ -1,0 +1,109 @@
+{
+  "bootIso": "2026-05-09T07-25-55-638Z",
+  "role": "control",
+  "cycle": 2549,
+  "ts": 1778312769247,
+  "cycleRecord": {
+    "cycle": 2549,
+    "agentRole": "control",
+    "startedAt": 1778312715682,
+    "endedAt": 1778312767991,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 2777,
+    "totalCostUsd": 0.035754999999999995,
+    "actionInvoked": {
+      "name": "v2-local-actions.firecrawl_scrape",
+      "args": {
+        "url": "https://www.oracle.com/artificial-intelligence/ai-agents/ai-agent-use-cases/"
+      },
+      "resultSummary": "{\"ok\":true,\"url\":\"https://www.oracle.com/artificial-intelligence/ai-agents/ai-agent-use-cases/\",\"markdown\":\"# 23 Real-World AI Agent Use Cases\\n\\nAaron Ricadela \\\\| Senior Writer \\\\| May 21, 2025\\n\\n**In This Article**\\n\\n- [What Is an AI Agent?](https://www.oracle.com/artificial-intelligence/ai-agents/ai-agent-use-cases/#what-is-ai-agent)\\n- [Where Are AI Agents Being Used?](https://www.oracle.com/artificial-intelligence/ai-agents/ai-agent-use-cases/#wheres-used)\\n- [23 AI Agent Use Cases for B"
+    },
+    "memoryWrites": 1,
+    "dataIngestEvents": 1
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 2549,
+        "agentRole": "control",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778312715852
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "f005c688-f677-43df-9dda-3d75da06c417",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778312715852
+      },
+      "ts": 1778312715852
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "control",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 2470,
+        "completionTokens": 307,
+        "cost": 0.003391,
+        "executionId": "f005c688-f677-43df-9dda-3d75da06c417",
+        "flowName": "naive-control-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T07:45:19.606Z"
+      },
+      "ts": 1778312719606
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "f005c688-f677-43df-9dda-3d75da06c417",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778312719606
+      },
+      "ts": 1778312719606
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "control",
+        "executionId": "f005c688-f677-43df-9dda-3d75da06c417",
+        "state": "complete",
+        "result": {
+          "text": "\n\n{\n  \"action\": \"v2-local-actions.firecrawl_scrape\",\n  \"payload\": {\n    \"url\": \"https://www.oracle.com/artificial-intelligence/ai-agents/ai-agent-use-cases/\"\n  },\n  \"thought\": \"Attempt to fetch the URL directly to resolve caching issues and make the resource available.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 2470,
+            "completionTokens": 307
+          }
+        },
+        "error": null
+      },
+      "ts": 1778312719606
+    },
+    {
+      "event": "adapter_tool_call",
+      "data": {
+        "agentRole": "control",
+        "adapter": "v2-local-actions",
+        "tool": "firecrawl_scrape",
+        "durationMs": 29451,
+        "success": true
+      },
+      "ts": 1778312749058
+    }
+  ]
+}
