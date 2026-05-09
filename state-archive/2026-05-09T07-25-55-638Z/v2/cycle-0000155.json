@@ -1,0 +1,95 @@
+{
+  "bootIso": "2026-05-09T07-25-55-638Z",
+  "role": "v2",
+  "cycle": 155,
+  "ts": 1778313928569,
+  "cycleRecord": {
+    "cycle": 155,
+    "agentRole": "v2",
+    "startedAt": 1778313898243,
+    "endedAt": 1778313928567,
+    "status": "cycle_failed_call",
+    "modelCalls": 1,
+    "totalTokens": 0,
+    "totalCostUsd": 0.3840189999999999,
+    "actionInvoked": null,
+    "memoryWrites": 0,
+    "dataIngestEvents": 0,
+    "failureReason": "{\"message\":\"Execution timed out after 30000ms\",\"stack\":null,\"retryable\":false,\"retryCount\":0,\"code\":\"TIMEOUT\"}"
+  },
+  "events": [
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 9640,
+        "completionTokens": 54,
+        "cost": 0.009802,
+        "executionId": "34d6b63b-c74f-4bb7-967c-516ca5860001",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T08:04:50.275Z"
+      },
+      "ts": 1778313890275
+    },
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 155,
+        "agentRole": "v2",
+        "memoryRecallQuery": "Goal: Capture and store the raw results (titles and snippets) of the five most recent web searches for later analysis.. Drive: resource. Last plan: .",
+        "nonEmptyLayers": [
+          "laws",
+          "reality",
+          "drives",
+          "goals",
+          "identity",
+          "capabilities",
+          "memory_recall"
+        ]
+      },
+      "ts": 1778313898558
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "9b829385-6365-4988-b07c-a1bbf1ce44f9",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778313898558
+      },
+      "ts": 1778313898558
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "9b829385-6365-4988-b07c-a1bbf1ce44f9",
+        "from": "running",
+        "to": "failed",
+        "timestamp": 1778313928558
+      },
+      "ts": 1778313928566
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "9b829385-6365-4988-b07c-a1bbf1ce44f9",
+        "state": "failed",
+        "result": null,
+        "error": {
+          "message": "Execution timed out after 30000ms",
+          "stack": null,
+          "retryable": false,
+          "retryCount": 0,
+          "code": "TIMEOUT"
+        }
+      },
+      "ts": 1778313928566
+    }
+  ]
+}
