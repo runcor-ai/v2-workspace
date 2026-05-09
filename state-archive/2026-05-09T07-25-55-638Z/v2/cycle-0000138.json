@@ -1,0 +1,143 @@
+{
+  "bootIso": "2026-05-09T07-25-55-638Z",
+  "role": "v2",
+  "cycle": 138,
+  "ts": 1778312508753,
+  "cycleRecord": {
+    "cycle": 138,
+    "agentRole": "v2",
+    "startedAt": 1778312503431,
+    "endedAt": 1778312508753,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 13998,
+    "totalCostUsd": 0.15088699999999997,
+    "actionInvoked": {
+      "name": "v2-local-actions.web_search",
+      "args": {
+        "query": "AI budget"
+      },
+      "resultSummary": "{\"ok\":true,\"query\":\"AI budget\",\"provider\":\"firecrawl\",\"results\":[{\"title\":\"AI budget planner: Create your personalized budget in minutes\",\"url\":\"https://manus.im/playbook/budget-planner\",\"snippet\":\"Take control of your finances with our AI budget planner. Create a personalized budget, track your spending, and achieve your financial goals with Manus.\"},{\"title\":\"AI Budgeting & Spend Tracking | Origin Financial\",\"url\":\"https://useorigin.com/products/spending\",\"snippet\":\"Track spending, subscriptio"
+    },
+    "memoryWrites": 3,
+    "dataIngestEvents": 0
+  },
+  "events": [
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 11645,
+        "completionTokens": 80,
+        "cost": 0.011885,
+        "executionId": "f158c65d-b221-4809-b0de-ba7c27c2e925",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T07:41:27.774Z"
+      },
+      "ts": 1778312487774
+    },
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 138,
+        "agentRole": "v2",
+        "memoryRecallQuery": "Goal: Capture and store the raw results (titles and snippets) of the five most recent web searches for later analysis.. Drive: resource. Last plan: .",
+        "nonEmptyLayers": [
+          "laws",
+          "reality",
+          "drives",
+          "goals",
+          "identity",
+          "capabilities",
+          "memory_recall"
+        ]
+      },
+      "ts": 1778312503693
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "aee0ce0d-a256-4c07-b674-d2541c9562a4",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778312503693
+      },
+      "ts": 1778312503693
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 13286,
+        "completionTokens": 712,
+        "cost": 0.015421999999999998,
+        "executionId": "aee0ce0d-a256-4c07-b674-d2541c9562a4",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T07:41:47.517Z"
+      },
+      "ts": 1778312507517
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "aee0ce0d-a256-4c07-b674-d2541c9562a4",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778312507517
+      },
+      "ts": 1778312507517
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "aee0ce0d-a256-4c07-b674-d2541c9562a4",
+        "state": "complete",
+        "result": {
+          "text": "{\n  \"action\": \"v2-local-actions.web_search\",\n  \"args\": {\n    \"query\": \"AI budget\"\n  },\n  \"reasoning\": \"Start gathering raw web search results to fulfill the goal of storing the five most recent searches for later analysis.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 13286,
+            "completionTokens": 712
+          }
+        },
+        "error": null
+      },
+      "ts": 1778312507517
+    },
+    {
+      "event": "adapter_tool_call",
+      "data": {
+        "agentRole": "v2",
+        "adapter": "v2-local-actions",
+        "tool": "web_search",
+        "durationMs": 345,
+        "success": true
+      },
+      "ts": 1778312507862
+    },
+    {
+      "event": "side_effect_error",
+      "data": {
+        "cycle": 138,
+        "agentRole": "v2",
+        "errors": [
+          {
+            "step": "data_ingest",
+            "error": "Unexpected token 'W', \"We need to\"... is not valid JSON"
+          }
+        ]
+      },
+      "ts": 1778312508753
+    }
+  ]
+}
