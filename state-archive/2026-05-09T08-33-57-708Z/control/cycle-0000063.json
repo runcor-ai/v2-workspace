@@ -1,0 +1,92 @@
+{
+  "bootIso": "2026-05-09T08-33-57-708Z",
+  "role": "control",
+  "cycle": 63,
+  "ts": 1778316847204,
+  "cycleRecord": {
+    "cycle": 63,
+    "agentRole": "control",
+    "startedAt": 1778316845026,
+    "endedAt": 1778316847203,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 1648,
+    "totalCostUsd": 0.055236000000000014,
+    "actionInvoked": null,
+    "memoryWrites": 0,
+    "dataIngestEvents": 0
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 63,
+        "agentRole": "control",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778316845173
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "a1ef9e96-480a-4bac-9a5d-72e146e1f808",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778316845173
+      },
+      "ts": 1778316845173
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "control",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 1326,
+        "completionTokens": 322,
+        "cost": 0.0022919999999999998,
+        "executionId": "a1ef9e96-480a-4bac-9a5d-72e146e1f808",
+        "flowName": "naive-control-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T08:54:07.201Z"
+      },
+      "ts": 1778316847201
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "a1ef9e96-480a-4bac-9a5d-72e146e1f808",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778316847201
+      },
+      "ts": 1778316847201
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "control",
+        "executionId": "a1ef9e96-480a-4bac-9a5d-72e146e1f808",
+        "state": "complete",
+        "result": {
+          "text": "{\n  \"action\": \"none\",\n  \"payload\": {},\n  \"thought\": \"No actionable steps given current constraints; email remains unconfigured and no further capabilities can resolve it.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 1326,
+            "completionTokens": 322
+          }
+        },
+        "error": null
+      },
+      "ts": 1778316847201
+    }
+  ]
+}
