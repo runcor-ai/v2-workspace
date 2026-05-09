@@ -1,0 +1,92 @@
+{
+  "bootIso": "2026-05-09T08-33-57-708Z",
+  "role": "control",
+  "cycle": 43,
+  "ts": 1778316065801,
+  "cycleRecord": {
+    "cycle": 43,
+    "agentRole": "control",
+    "startedAt": 1778316065292,
+    "endedAt": 1778316065801,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 960,
+    "totalCostUsd": 0.026931,
+    "actionInvoked": null,
+    "memoryWrites": 0,
+    "dataIngestEvents": 0
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 43,
+        "agentRole": "control",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778316065455
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "34f44b6d-1d1f-46d1-9fe7-6f92ad1c10a7",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778316065455
+      },
+      "ts": 1778316065455
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "control",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 928,
+        "completionTokens": 32,
+        "cost": 0.001024,
+        "executionId": "34f44b6d-1d1f-46d1-9fe7-6f92ad1c10a7",
+        "flowName": "naive-control-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T08:41:05.798Z"
+      },
+      "ts": 1778316065798
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "34f44b6d-1d1f-46d1-9fe7-6f92ad1c10a7",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778316065798
+      },
+      "ts": 1778316065798
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "control",
+        "executionId": "34f44b6d-1d1f-46d1-9fe7-6f92ad1c10a7",
+        "state": "complete",
+        "result": {
+          "text": "\n\n{\n  \"action\": \"none\",\n  \"payload\": {},\n  \"thought\": \"No actionable steps available to configure email; awaiting external setup.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 928,
+            "completionTokens": 32
+          }
+        },
+        "error": null
+      },
+      "ts": 1778316065798
+    }
+  ]
+}
