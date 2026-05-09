@@ -1,0 +1,107 @@
+{
+  "bootIso": "2026-05-09T09-59-15-370Z",
+  "role": "v2",
+  "cycle": 80,
+  "ts": 1778321668260,
+  "cycleRecord": {
+    "cycle": 80,
+    "agentRole": "v2",
+    "startedAt": 1778321577699,
+    "endedAt": 1778321668259,
+    "status": "cycle_failed_call",
+    "modelCalls": 1,
+    "totalTokens": 0,
+    "totalCostUsd": 0.165225,
+    "actionInvoked": null,
+    "memoryWrites": 0,
+    "dataIngestEvents": 0,
+    "failureReason": "{\"message\":\"Execution timed out after 90000ms\",\"stack\":null,\"retryable\":false,\"retryCount\":0,\"code\":\"TIMEOUT\"}"
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 80,
+        "agentRole": "v2",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778321578258
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "c001ba95-a662-4ec7-913a-8e3915c1e904",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778321578259
+      },
+      "ts": 1778321578259
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 2106,
+        "completionTokens": 4337,
+        "cost": 0.015117,
+        "executionId": "be4ab9e4-3496-4806-bfff-f2e25dd917fe",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T10:13:43.017Z"
+      },
+      "ts": 1778321623017
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 2106,
+        "completionTokens": 7801,
+        "cost": 0.025509,
+        "executionId": "28a86226-6a27-44ee-bb7a-481ffef8a0ea",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T10:13:51.372Z"
+      },
+      "ts": 1778321631372
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "c001ba95-a662-4ec7-913a-8e3915c1e904",
+        "from": "running",
+        "to": "failed",
+        "timestamp": 1778321668259
+      },
+      "ts": 1778321668259
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "c001ba95-a662-4ec7-913a-8e3915c1e904",
+        "state": "failed",
+        "result": null,
+        "error": {
+          "message": "Execution timed out after 90000ms",
+          "stack": null,
+          "retryable": false,
+          "retryCount": 0,
+          "code": "TIMEOUT"
+        }
+      },
+      "ts": 1778321668259
+    }
+  ]
+}
