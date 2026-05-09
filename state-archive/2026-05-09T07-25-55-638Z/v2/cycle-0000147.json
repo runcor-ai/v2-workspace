@@ -1,0 +1,134 @@
+{
+  "bootIso": "2026-05-09T07-25-55-638Z",
+  "role": "v2",
+  "cycle": 147,
+  "ts": 1778313470052,
+  "cycleRecord": {
+    "cycle": 147,
+    "agentRole": "v2",
+    "startedAt": 1778313253059,
+    "endedAt": 1778313470052,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 10233,
+    "totalCostUsd": 0.273261,
+    "actionInvoked": {
+      "name": "web_search",
+      "args": {
+        "query": "AI budget"
+      },
+      "resultSummary": "{\"ok\":true,\"query\":\"AI budget\",\"provider\":\"firecrawl\",\"results\":[{\"title\":\"AI budget planner: Create your personalized budget in minutes\",\"url\":\"https://manus.im/playbook/budget-planner\",\"snippet\":\"Take control of your finances with our AI budget planner. Create a personalized budget, track your spending, and achieve your financial goals with Manus.\"},{\"title\":\"AI Budgeting & Spend Tracking | Origin Financial\",\"url\":\"https://useorigin.com/products/spending\",\"snippet\":\"Track spending, subscriptio"
+    },
+    "memoryWrites": 12,
+    "dataIngestEvents": 1,
+    "flag": {
+      "flagNodeId": "5a80536d-35d5-4f22-bfd1-64bafe0b7d31",
+      "failedLawId": "reality",
+      "attemptsCount": 3
+    }
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 147,
+        "agentRole": "v2",
+        "memoryRecallQuery": "Goal: Capture and store the raw results (titles and snippets) of the five most recent web searches for later analysis.. Drive: resource. Last plan: .",
+        "nonEmptyLayers": [
+          "laws",
+          "reality",
+          "drives",
+          "goals",
+          "identity",
+          "capabilities",
+          "memory_recall"
+        ]
+      },
+      "ts": 1778313253451
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "6e7ba92f-10eb-4ade-8015-f678c7a265e1",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778313253451
+      },
+      "ts": 1778313253451
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 10181,
+        "completionTokens": 52,
+        "cost": 0.010336999999999999,
+        "executionId": "6e7ba92f-10eb-4ade-8015-f678c7a265e1",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T07:54:24.988Z"
+      },
+      "ts": 1778313264988
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "6e7ba92f-10eb-4ade-8015-f678c7a265e1",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778313264988
+      },
+      "ts": 1778313264988
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "6e7ba92f-10eb-4ade-8015-f678c7a265e1",
+        "state": "complete",
+        "result": {
+          "text": "{\n  \"action\": \"web_search\",\n  \"args\": {\n    \"query\": \"AI budget\"\n  },\n  \"reasoning\": \"Begin capturing web search results to fulfill the goal of storing the five most recent searches for later analysis.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 10181,
+            "completionTokens": 52
+          }
+        },
+        "error": null
+      },
+      "ts": 1778313264988
+    },
+    {
+      "event": "adapter_tool_call",
+      "data": {
+        "agentRole": "v2",
+        "adapter": "v2-local-actions",
+        "tool": "web_search",
+        "durationMs": 430,
+        "success": true
+      },
+      "ts": 1778313265419
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 10181,
+        "completionTokens": 55,
+        "cost": 0.010346,
+        "executionId": "44b8e41c-815a-47dd-9034-e1d0cd011664",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T07:55:34.496Z"
+      },
+      "ts": 1778313334496
+    }
+  ]
+}
