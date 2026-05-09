@@ -1,0 +1,110 @@
+{
+  "bootIso": "2026-05-09T09-20-45-061Z",
+  "role": "v2",
+  "cycle": 50,
+  "ts": 1778319515871,
+  "cycleRecord": {
+    "cycle": 50,
+    "agentRole": "v2",
+    "startedAt": 1778319462745,
+    "endedAt": 1778319515870,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 5755,
+    "totalCostUsd": 0.10107200000000002,
+    "actionInvoked": {
+      "name": "fs_write",
+      "args": {
+        "path": "scratchpad/decision-log.md",
+        "content": "## Day 0, Cycle 50\n\nDecided to triage inbox in next cycle to assess priorities before making strategic decisions."
+      },
+      "resultSummary": "{\"ok\":true,\"sizeBytes\":113,\"ts\":1778319483852}"
+    },
+    "memoryWrites": 4,
+    "dataIngestEvents": 1
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 50,
+        "agentRole": "v2",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778319462916
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "94d4eeb4-96e7-4577-9bdd-f1096c87a6ff",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778319462916
+      },
+      "ts": 1778319462916
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 1483,
+        "completionTokens": 4272,
+        "cost": 0.014299000000000001,
+        "executionId": "94d4eeb4-96e7-4577-9bdd-f1096c87a6ff",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T09:38:03.851Z"
+      },
+      "ts": 1778319483851
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "94d4eeb4-96e7-4577-9bdd-f1096c87a6ff",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778319483851
+      },
+      "ts": 1778319483851
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "94d4eeb4-96e7-4577-9bdd-f1096c87a6ff",
+        "state": "complete",
+        "result": {
+          "text": "{\n  \"action\": \"fs_write\",\n  \"args\": {\n    \"path\": \"scratchpad/decision-log.md\",\n    \"content\": \"## Day 0, Cycle 50\\n\\nDecided to triage inbox in next cycle to assess priorities before making strategic decisions.\"\n  },\n  \"reasoning\": \"As CEO, I must make and record a decision each cycle; today I chose to plan inbox triage for the next cycle to stay informed.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 1483,
+            "completionTokens": 4272
+          }
+        },
+        "error": null
+      },
+      "ts": 1778319483851
+    },
+    {
+      "event": "adapter_tool_call",
+      "data": {
+        "agentRole": "v2",
+        "adapter": "v2-local-actions",
+        "tool": "fs_write",
+        "durationMs": 1,
+        "success": true
+      },
+      "ts": 1778319483852
+    }
+  ]
+}
