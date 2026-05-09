@@ -1,0 +1,114 @@
+{
+  "bootIso": "2026-05-09T07-25-55-638Z",
+  "role": "control",
+  "cycle": 2552,
+  "ts": 1778313335555,
+  "cycleRecord": {
+    "cycle": 2552,
+    "agentRole": "control",
+    "startedAt": 1778312895422,
+    "endedAt": 1778313335555,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 2362,
+    "totalCostUsd": 0.04427,
+    "actionInvoked": {
+      "name": "v2-local-actions.web_search",
+      "args": {
+        "query": "Oracle AI agent use cases"
+      },
+      "resultSummary": "{\"ok\":true,\"query\":\"Oracle AI agent use cases\",\"provider\":\"firecrawl\",\"results\":[{\"title\":\"23 Real-World AI Agent Use Cases - Oracle\",\"url\":\"https://www.oracle.com/artificial-intelligence/ai-agents/ai-agent-use-cases/\",\"snippet\":\"Learn how AI agents can help businesses of all types.\"},{\"title\":\"AI Agents for HR: 12 Use Cases - Oracle\",\"url\":\"https://www.oracle.com/artificial-intelligence/ai-agents/ai-agents-hr/\",\"snippet\":\"AI agents embedded into HR workflows can access employee data in HCM syst"
+    },
+    "memoryWrites": 1,
+    "dataIngestEvents": 1,
+    "flag": {
+      "flagNodeId": "5a80536d-35d5-4f22-bfd1-64bafe0b7d31",
+      "failedLawId": "reality",
+      "attemptsCount": 3
+    }
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 2552,
+        "agentRole": "control",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778312895533
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "020324d6-b799-4c8d-acb1-d26cb5a704dd",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778312895533
+      },
+      "ts": 1778312895533
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "control",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 2297,
+        "completionTokens": 65,
+        "cost": 0.002492,
+        "executionId": "020324d6-b799-4c8d-acb1-d26cb5a704dd",
+        "flowName": "naive-control-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T07:48:43.486Z"
+      },
+      "ts": 1778312923486
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "020324d6-b799-4c8d-acb1-d26cb5a704dd",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778312923486
+      },
+      "ts": 1778312923486
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "control",
+        "executionId": "020324d6-b799-4c8d-acb1-d26cb5a704dd",
+        "state": "complete",
+        "result": {
+          "text": "{\n  \"action\": \"v2-local-actions.web_search\",\n  \"payload\": {\n    \"query\": \"Oracle AI agent use cases\"\n  },\n  \"thought\": \"Multiple error logs show 'not_cached' for the Oracle AI agent use cases URL, so I will search the web for alternative sources.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 2297,
+            "completionTokens": 65
+          }
+        },
+        "error": null
+      },
+      "ts": 1778312923486
+    },
+    {
+      "event": "adapter_tool_call",
+      "data": {
+        "agentRole": "control",
+        "adapter": "v2-local-actions",
+        "tool": "web_search",
+        "durationMs": 308,
+        "success": true
+      },
+      "ts": 1778312923795
+    }
+  ]
+}
