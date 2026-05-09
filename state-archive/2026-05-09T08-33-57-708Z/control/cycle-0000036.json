@@ -1,0 +1,92 @@
+{
+  "bootIso": "2026-05-09T08-33-57-708Z",
+  "role": "control",
+  "cycle": 36,
+  "ts": 1778315816172,
+  "cycleRecord": {
+    "cycle": 36,
+    "agentRole": "control",
+    "startedAt": 1778315815646,
+    "endedAt": 1778315816171,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 1002,
+    "totalCostUsd": 0.0073349999999999995,
+    "actionInvoked": null,
+    "memoryWrites": 0,
+    "dataIngestEvents": 0
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 36,
+        "agentRole": "control",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778315815912
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "48ca4244-b078-4d83-a6fd-201f3eb13714",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778315815912
+      },
+      "ts": 1778315815912
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "control",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 990,
+        "completionTokens": 12,
+        "cost": 0.001026,
+        "executionId": "48ca4244-b078-4d83-a6fd-201f3eb13714",
+        "flowName": "naive-control-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T08:36:56.169Z"
+      },
+      "ts": 1778315816169
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "48ca4244-b078-4d83-a6fd-201f3eb13714",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778315816169
+      },
+      "ts": 1778315816169
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "control",
+        "executionId": "48ca4244-b078-4d83-a6fd-201f3eb13714",
+        "state": "complete",
+        "result": {
+          "text": "We need to output JSON only. No extra text.",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 990,
+            "completionTokens": 12
+          }
+        },
+        "error": null
+      },
+      "ts": 1778315816169
+    }
+  ]
+}
