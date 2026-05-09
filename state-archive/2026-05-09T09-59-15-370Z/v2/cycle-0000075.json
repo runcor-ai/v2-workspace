@@ -1,0 +1,110 @@
+{
+  "bootIso": "2026-05-09T09-59-15-370Z",
+  "role": "v2",
+  "cycle": 75,
+  "ts": 1778321066419,
+  "cycleRecord": {
+    "cycle": 75,
+    "agentRole": "v2",
+    "startedAt": 1778321009106,
+    "endedAt": 1778321066419,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 3399,
+    "totalCostUsd": 0.072798,
+    "actionInvoked": {
+      "name": "fs_write",
+      "args": {
+        "path": "scratchpad/decision-log.md",
+        "content": "## Day 0, Cycle 75\n\nDecided to create a GitHub repo for a new internal tool to track decisions."
+      },
+      "resultSummary": "{\"ok\":true,\"sizeBytes\":95,\"ts\":1778321015014}"
+    },
+    "memoryWrites": 4,
+    "dataIngestEvents": 1
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 75,
+        "agentRole": "v2",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778321009296
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "51c2ed4f-af66-49ed-bcd1-729c19b3ec4b",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778321009296
+      },
+      "ts": 1778321009296
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 2108,
+        "completionTokens": 1291,
+        "cost": 0.005981,
+        "executionId": "51c2ed4f-af66-49ed-bcd1-729c19b3ec4b",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T10:03:35.013Z"
+      },
+      "ts": 1778321015013
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "51c2ed4f-af66-49ed-bcd1-729c19b3ec4b",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778321015013
+      },
+      "ts": 1778321015013
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "51c2ed4f-af66-49ed-bcd1-729c19b3ec4b",
+        "state": "complete",
+        "result": {
+          "text": "{\n  \"action\": \"fs_write\",\n  \"args\": {\n    \"path\": \"scratchpad/decision-log.md\",\n    \"content\": \"## Day 0, Cycle 75\\n\\nDecided to create a GitHub repo for a new internal tool to track decisions.\"\n  },\n  \"reasoning\": \"As CEO, I must make and record a decision each cycle; today I decide to initiate a new repo for decision tracking.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 2108,
+            "completionTokens": 1291
+          }
+        },
+        "error": null
+      },
+      "ts": 1778321015013
+    },
+    {
+      "event": "adapter_tool_call",
+      "data": {
+        "agentRole": "v2",
+        "adapter": "v2-local-actions",
+        "tool": "fs_write",
+        "durationMs": 1,
+        "success": true
+      },
+      "ts": 1778321015014
+    }
+  ]
+}
