@@ -1,0 +1,109 @@
+{
+  "bootIso": "2026-05-09T05-53-26-681Z",
+  "role": "control",
+  "cycle": 2518,
+  "ts": 1778306800772,
+  "cycleRecord": {
+    "cycle": 2518,
+    "agentRole": "control",
+    "startedAt": 1778306781272,
+    "endedAt": 1778306800772,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 2766,
+    "totalCostUsd": 0.028289,
+    "actionInvoked": {
+      "name": "v2-local-actions.firecrawl_scrape",
+      "args": {
+        "url": "https://www.oracle.com/artificial-intelligence/ai-agents/ai-agent-use-cases/"
+      },
+      "resultSummary": "{\"ok\":true,\"url\":\"https://www.oracle.com/artificial-intelligence/ai-agents/ai-agent-use-cases/\",\"markdown\":\"# 23 Real-World AI Agent Use Cases\\n\\nAaron Ricadela \\\\| Senior Writer \\\\| May 21, 2025\\n\\n**In This Article**\\n\\n- [What Is an AI Agent?](https://www.oracle.com/artificial-intelligence/ai-agents/ai-agent-use-cases/#what-is-ai-agent)\\n- [Where Are AI Agents Being Used?](https://www.oracle.com/artificial-intelligence/ai-agents/ai-agent-use-cases/#wheres-used)\\n- [23 AI Agent Use Cases for B"
+    },
+    "memoryWrites": 1,
+    "dataIngestEvents": 1
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 2518,
+        "agentRole": "control",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778306781408
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "12de7151-d6a4-4520-9f04-bc0a508431d5",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778306781408
+      },
+      "ts": 1778306781408
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "control",
+        "provider": "openrouter",
+        "model": "google/gemini-2.5-flash-lite",
+        "promptTokens": 2643,
+        "completionTokens": 123,
+        "cost": 0.003012,
+        "executionId": "12de7151-d6a4-4520-9f04-bc0a508431d5",
+        "flowName": "naive-control-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T06:06:22.608Z"
+      },
+      "ts": 1778306782608
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "12de7151-d6a4-4520-9f04-bc0a508431d5",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778306782609
+      },
+      "ts": 1778306782609
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "control",
+        "executionId": "12de7151-d6a4-4520-9f04-bc0a508431d5",
+        "state": "complete",
+        "result": {
+          "text": "```json\n{\n  \"action\": \"v2-local-actions.firecrawl_scrape\",\n  \"payload\": {\n    \"url\": \"https://www.oracle.com/artificial-intelligence/ai-agents/ai-agent-use-cases/\"\n  },\n  \"thought\": \"The error logs consistently show a 'not_cached' error for the Oracle AI agent use cases URL, and my dominant drive is 'resource', so I will attempt to scrape this URL directly using firecrawl to resolve the caching issue and make the resource available.\"\n}\n```",
+          "model": "google/gemini-2.5-flash-lite",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 2643,
+            "completionTokens": 123
+          }
+        },
+        "error": null
+      },
+      "ts": 1778306782609
+    },
+    {
+      "event": "adapter_tool_call",
+      "data": {
+        "agentRole": "control",
+        "adapter": "v2-local-actions",
+        "tool": "firecrawl_scrape",
+        "durationMs": 8631,
+        "success": true
+      },
+      "ts": 1778306791240
+    }
+  ]
+}
