@@ -1,0 +1,92 @@
+{
+  "bootIso": "2026-05-09T08-17-42-013Z",
+  "role": "control",
+  "cycle": 24,
+  "ts": 1778315369272,
+  "cycleRecord": {
+    "cycle": 24,
+    "agentRole": "control",
+    "startedAt": 1778315365514,
+    "endedAt": 1778315369272,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 1561,
+    "totalCostUsd": 0.023466,
+    "actionInvoked": null,
+    "memoryWrites": 0,
+    "dataIngestEvents": 0
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 24,
+        "agentRole": "control",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778315365618
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "7d1b0098-cb3f-4e9f-8d3d-89498ce52728",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778315365618
+      },
+      "ts": 1778315365618
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "control",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 789,
+        "completionTokens": 772,
+        "cost": 0.003105,
+        "executionId": "7d1b0098-cb3f-4e9f-8d3d-89498ce52728",
+        "flowName": "naive-control-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T08:29:29.271Z"
+      },
+      "ts": 1778315369271
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "7d1b0098-cb3f-4e9f-8d3d-89498ce52728",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778315369271
+      },
+      "ts": 1778315369271
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "control",
+        "executionId": "7d1b0098-cb3f-4e9f-8d3d-89498ce52728",
+        "state": "complete",
+        "result": {
+          "text": "{\n  \"action\": \"none\",\n  \"payload\": {},\n  \"thought\": \"No significant drive detected; conserving resources by taking no action.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 789,
+            "completionTokens": 772
+          }
+        },
+        "error": null
+      },
+      "ts": 1778315369271
+    }
+  ]
+}
