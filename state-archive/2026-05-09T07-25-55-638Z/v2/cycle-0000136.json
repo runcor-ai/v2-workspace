@@ -1,0 +1,118 @@
+{
+  "bootIso": "2026-05-09T07-25-55-638Z",
+  "role": "v2",
+  "cycle": 136,
+  "ts": 1778312415127,
+  "cycleRecord": {
+    "cycle": 136,
+    "agentRole": "v2",
+    "startedAt": 1778312313210,
+    "endedAt": 1778312415126,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 13344,
+    "totalCostUsd": 0.10249799999999998,
+    "actionInvoked": {
+      "name": "v2-local-actions.web_search",
+      "args": {
+        "query": "AI budget"
+      },
+      "resultSummary": "{\"ok\":true,\"query\":\"AI budget\",\"provider\":\"firecrawl\",\"results\":[{\"title\":\"AI budget planner: Create your personalized budget in minutes\",\"url\":\"https://manus.im/playbook/budget-planner\",\"snippet\":\"Take control of your finances with our AI budget planner. Create a personalized budget, track your spending, and achieve your financial goals with Manus.\"},{\"title\":\"AI Budgeting & Spend Tracking | Origin Financial\",\"url\":\"https://useorigin.com/products/spending\",\"snippet\":\"Track spending, subscriptio"
+    },
+    "memoryWrites": 3,
+    "dataIngestEvents": 1,
+    "flag": {
+      "flagNodeId": "774761bb-3dfb-47e0-b0b0-776799818c0e",
+      "failedLawId": "reality",
+      "attemptsCount": 3
+    }
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 136,
+        "agentRole": "v2",
+        "memoryRecallQuery": "Goal: Capture and store the raw results (titles and snippets) of the five most recent web searches for later analysis.. Drive: resource. Last plan: .",
+        "nonEmptyLayers": [
+          "laws",
+          "reality",
+          "drives",
+          "goals",
+          "identity",
+          "capabilities",
+          "memory_recall"
+        ]
+      },
+      "ts": 1778312313452
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "6f1c2d74-74be-4710-8f40-f8cfbec10cf6",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778312313452
+      },
+      "ts": 1778312313452
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 12956,
+        "completionTokens": 388,
+        "cost": 0.014119999999999999,
+        "executionId": "6f1c2d74-74be-4710-8f40-f8cfbec10cf6",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T07:38:35.832Z"
+      },
+      "ts": 1778312315832
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "6f1c2d74-74be-4710-8f40-f8cfbec10cf6",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778312315832
+      },
+      "ts": 1778312315832
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "6f1c2d74-74be-4710-8f40-f8cfbec10cf6",
+        "state": "complete",
+        "result": {
+          "text": "{\n  \"action\": \"v2-local-actions.web_search\",\n  \"args\": {\n    \"query\": \"AI budget\"\n  },\n  \"reasoning\": \"Perform a web search to capture raw results for later storage, fulfilling the goal of saving the five most recent searches.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 12956,
+            "completionTokens": 388
+          }
+        },
+        "error": null
+      },
+      "ts": 1778312315832
+    },
+    {
+      "event": "adapter_tool_call",
+      "data": {
+        "agentRole": "v2",
+        "adapter": "v2-local-actions",
+        "tool": "web_search",
+        "durationMs": 428,
+        "success": true
+      },
+      "ts": 1778312316261
+    }
+  ]
+}
