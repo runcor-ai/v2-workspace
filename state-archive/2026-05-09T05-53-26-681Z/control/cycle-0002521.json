@@ -1,0 +1,98 @@
+{
+  "bootIso": "2026-05-09T05-53-26-681Z",
+  "role": "control",
+  "cycle": 2521,
+  "ts": 1778306944402,
+  "cycleRecord": {
+    "cycle": 2521,
+    "agentRole": "control",
+    "startedAt": 1778306918791,
+    "endedAt": 1778306944402,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 2744,
+    "totalCostUsd": 0.045729,
+    "actionInvoked": {
+      "name": "v2_local_actions.web_search",
+      "args": {
+        "query": "AI agents"
+      },
+      "resultSummary": "tool_dispatch_error: Tool \"v2_local_actions.web_search\" is not registered on any adapter."
+    },
+    "memoryWrites": 1,
+    "dataIngestEvents": 1
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 2521,
+        "agentRole": "control",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778306918984
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "72eb5444-32f0-46b1-b235-1430d2a453a6",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778306918984
+      },
+      "ts": 1778306918984
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "control",
+        "provider": "openrouter",
+        "model": "google/gemini-2.5-flash-lite",
+        "promptTokens": 2643,
+        "completionTokens": 101,
+        "cost": 0.002946,
+        "executionId": "72eb5444-32f0-46b1-b235-1430d2a453a6",
+        "flowName": "naive-control-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T06:08:40.146Z"
+      },
+      "ts": 1778306920146
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "72eb5444-32f0-46b1-b235-1430d2a453a6",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778306920146
+      },
+      "ts": 1778306920146
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "control",
+        "executionId": "72eb5444-32f0-46b1-b235-1430d2a453a6",
+        "state": "complete",
+        "result": {
+          "text": "No memories exist.\nNo relevant information is available in the current context.\nI will start by searching the web for information on AI agents, as my dominant drive is resource and I need to gather information to understand the current landscape and identify potential resources.\n{\"action\": \"v2_local_actions.web_search\", \"payload\": {\"query\": \"AI agents\"}, \"thought\": \"I will search the web for information on AI agents to gather resources and understand the current landscape.\"}",
+          "model": "google/gemini-2.5-flash-lite",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 2643,
+            "completionTokens": 101
+          }
+        },
+        "error": null
+      },
+      "ts": 1778306920146
+    }
+  ]
+}
