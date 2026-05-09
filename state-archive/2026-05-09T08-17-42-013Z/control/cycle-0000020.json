@@ -1,0 +1,92 @@
+{
+  "bootIso": "2026-05-09T08-17-42-013Z",
+  "role": "control",
+  "cycle": 20,
+  "ts": 1778315238746,
+  "cycleRecord": {
+    "cycle": 20,
+    "agentRole": "control",
+    "startedAt": 1778315237397,
+    "endedAt": 1778315238745,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 887,
+    "totalCostUsd": 0.017324000000000003,
+    "actionInvoked": null,
+    "memoryWrites": 0,
+    "dataIngestEvents": 0
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 20,
+        "agentRole": "control",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778315237577
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "eac9b754-efe2-48de-a33e-4b0ea9e3f418",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778315237577
+      },
+      "ts": 1778315237577
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "control",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 789,
+        "completionTokens": 98,
+        "cost": 0.001083,
+        "executionId": "eac9b754-efe2-48de-a33e-4b0ea9e3f418",
+        "flowName": "naive-control-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T08:27:18.744Z"
+      },
+      "ts": 1778315238744
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "eac9b754-efe2-48de-a33e-4b0ea9e3f418",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778315238744
+      },
+      "ts": 1778315238744
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "control",
+        "executionId": "eac9b754-efe2-48de-a33e-4b0ea9e3f418",
+        "state": "complete",
+        "result": {
+          "text": "{\n  \"action\": \"none\",\n  \"payload\": {},\n  \"thought\": \"No immediate tasks identified.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 789,
+            "completionTokens": 98
+          }
+        },
+        "error": null
+      },
+      "ts": 1778315238744
+    }
+  ]
+}
