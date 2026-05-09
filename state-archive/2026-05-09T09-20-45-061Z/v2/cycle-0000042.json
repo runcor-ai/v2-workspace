@@ -1,0 +1,109 @@
+{
+  "bootIso": "2026-05-09T09-20-45-061Z",
+  "role": "v2",
+  "cycle": 42,
+  "ts": 1778319058930,
+  "cycleRecord": {
+    "cycle": 42,
+    "agentRole": "v2",
+    "startedAt": 1778319013725,
+    "endedAt": 1778319058930,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 1383,
+    "totalCostUsd": 0.01976,
+    "actionInvoked": {
+      "name": "v2-local-actions.fs_read",
+      "args": {
+        "path": "scratchpad/decision-log.md"
+      },
+      "resultSummary": "ERROR: {\"ok\":false,\"error\":\"not_found\"}"
+    },
+    "memoryWrites": 2,
+    "dataIngestEvents": 1
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 42,
+        "agentRole": "v2",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778319013849
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "54a9cd69-b8fc-406e-87b6-59db48506454",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778319013849
+      },
+      "ts": 1778319013849
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 1330,
+        "completionTokens": 53,
+        "cost": 0.001489,
+        "executionId": "54a9cd69-b8fc-406e-87b6-59db48506454",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T09:30:18.411Z"
+      },
+      "ts": 1778319018411
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "54a9cd69-b8fc-406e-87b6-59db48506454",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778319018411
+      },
+      "ts": 1778319018411
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "54a9cd69-b8fc-406e-87b6-59db48506454",
+        "state": "complete",
+        "result": {
+          "text": "{\n  \"action\": \"v2-local-actions.fs_read\",\n  \"args\": {\n    \"path\": \"scratchpad/decision-log.md\"\n  },\n  \"reasoning\": \"Check existing decision log to understand format before appending today's decision.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 1330,
+            "completionTokens": 53
+          }
+        },
+        "error": null
+      },
+      "ts": 1778319018411
+    },
+    {
+      "event": "adapter_tool_call",
+      "data": {
+        "agentRole": "v2",
+        "adapter": "v2-local-actions",
+        "tool": "fs_read",
+        "durationMs": 1,
+        "success": true
+      },
+      "ts": 1778319018412
+    }
+  ]
+}
