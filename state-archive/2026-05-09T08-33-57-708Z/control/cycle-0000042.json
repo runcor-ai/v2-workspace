@@ -1,0 +1,97 @@
+{
+  "bootIso": "2026-05-09T08-33-57-708Z",
+  "role": "control",
+  "cycle": 42,
+  "ts": 1778316035291,
+  "cycleRecord": {
+    "cycle": 42,
+    "agentRole": "control",
+    "startedAt": 1778316017945,
+    "endedAt": 1778316035291,
+    "status": "completed_with_flag",
+    "modelCalls": 1,
+    "totalTokens": 2420,
+    "totalCostUsd": 0.025907,
+    "actionInvoked": null,
+    "memoryWrites": 0,
+    "dataIngestEvents": 0,
+    "flag": {
+      "flagNodeId": "c49f3022-3cdd-4cea-abe1-ea3a1b6edb79",
+      "failedLawId": "reality",
+      "attemptsCount": 3
+    }
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 42,
+        "agentRole": "control",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778316018285
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "bebadf66-c8b3-40cb-87e7-b6d98b73d08e",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778316018285
+      },
+      "ts": 1778316018285
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "control",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 990,
+        "completionTokens": 1430,
+        "cost": 0.00528,
+        "executionId": "bebadf66-c8b3-40cb-87e7-b6d98b73d08e",
+        "flowName": "naive-control-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T08:40:35.289Z"
+      },
+      "ts": 1778316035289
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "bebadf66-c8b3-40cb-87e7-b6d98b73d08e",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778316035289
+      },
+      "ts": 1778316035289
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "control",
+        "executionId": "bebadf66-c8b3-40cb-87e7-b6d98b73d08e",
+        "state": "complete",
+        "result": {
+          "text": "{\n  \"action\": \"none\",\n  \"payload\": {},\n  \"thought\": \"No actionable steps available due to unconfigured email and low drives; waiting for external configuration.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 990,
+            "completionTokens": 1430
+          }
+        },
+        "error": null
+      },
+      "ts": 1778316035289
+    }
+  ]
+}
