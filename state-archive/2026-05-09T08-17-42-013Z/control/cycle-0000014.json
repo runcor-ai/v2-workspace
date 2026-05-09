@@ -1,0 +1,92 @@
+{
+  "bootIso": "2026-05-09T08-17-42-013Z",
+  "role": "control",
+  "cycle": 14,
+  "ts": 1778315051324,
+  "cycleRecord": {
+    "cycle": 14,
+    "agentRole": "control",
+    "startedAt": 1778315044465,
+    "endedAt": 1778315051324,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 781,
+    "totalCostUsd": 0.012055,
+    "actionInvoked": null,
+    "memoryWrites": 0,
+    "dataIngestEvents": 0
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 14,
+        "agentRole": "control",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778315044614
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "a0aff113-0800-4886-bf98-168399b69cfd",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778315044615
+      },
+      "ts": 1778315044615
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "control",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 751,
+        "completionTokens": 30,
+        "cost": 0.000841,
+        "executionId": "a0aff113-0800-4886-bf98-168399b69cfd",
+        "flowName": "naive-control-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T08:24:11.323Z"
+      },
+      "ts": 1778315051323
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "a0aff113-0800-4886-bf98-168399b69cfd",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778315051323
+      },
+      "ts": 1778315051323
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "control",
+        "executionId": "a0aff113-0800-4886-bf98-168399b69cfd",
+        "state": "complete",
+        "result": {
+          "text": "{\n  \"action\": \"none\",\n  \"payload\": {},\n  \"thought\": \"No immediate priority; staying idle conserves resources.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 751,
+            "completionTokens": 30
+          }
+        },
+        "error": null
+      },
+      "ts": 1778315051324
+    }
+  ]
+}
