@@ -1,0 +1,123 @@
+{
+  "bootIso": "2026-05-09T08-17-42-013Z",
+  "role": "v2",
+  "cycle": 7,
+  "ts": 1778314945033,
+  "cycleRecord": {
+    "cycle": 7,
+    "agentRole": "v2",
+    "startedAt": 1778314925173,
+    "endedAt": 1778314945033,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 1141,
+    "totalCostUsd": 0.008917,
+    "actionInvoked": {
+      "name": "web_search",
+      "args": {
+        "query": "IMAP SMTP email configuration guide"
+      },
+      "resultSummary": "{\"ok\":true,\"query\":\"IMAP SMTP email configuration guide\",\"provider\":\"firecrawl\",\"results\":[{\"title\":\"POP, IMAP, and SMTP settings for Outlook.com - Microsoft Support\",\"url\":\"https://support.microsoft.com/en-us/office/pop-imap-and-smtp-settings-for-outlook-com-d088b986-291d-42b8-9564-9c414e2aa040\",\"snippet\":\"If you want to use POP or IMAP to access your email in Outlook.com, you'll first need to enable access. Select Settings > Mail > Forwarding and IMAP. Under POP ...\"},{\"title\":\"IMAP, POP, and "
+    },
+    "memoryWrites": 3,
+    "dataIngestEvents": 0
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 7,
+        "agentRole": "v2",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778314925286
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "39aac548-0669-4073-bfa1-24b3bf3c7481",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778314925286
+      },
+      "ts": 1778314925286
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 1094,
+        "completionTokens": 47,
+        "cost": 0.001235,
+        "executionId": "39aac548-0669-4073-bfa1-24b3bf3c7481",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T08:22:15.602Z"
+      },
+      "ts": 1778314935602
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "39aac548-0669-4073-bfa1-24b3bf3c7481",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778314935602
+      },
+      "ts": 1778314935602
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "39aac548-0669-4073-bfa1-24b3bf3c7481",
+        "state": "complete",
+        "result": {
+          "text": "{\n  \"action\": \"web_search\",\n  \"args\": {\n    \"query\": \"IMAP SMTP email configuration guide\"\n  },\n  \"reasoning\": \"Resource drive motivates seeking information to configure email capabilities.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 1094,
+            "completionTokens": 47
+          }
+        },
+        "error": null
+      },
+      "ts": 1778314935602
+    },
+    {
+      "event": "adapter_tool_call",
+      "data": {
+        "agentRole": "v2",
+        "adapter": "v2-local-actions",
+        "tool": "web_search",
+        "durationMs": 1381,
+        "success": true
+      },
+      "ts": 1778314936983
+    },
+    {
+      "event": "side_effect_error",
+      "data": {
+        "cycle": 7,
+        "agentRole": "v2",
+        "errors": [
+          {
+            "step": "data_ingest",
+            "error": "Unexpected token 'W', \"We need to\"... is not valid JSON"
+          }
+        ]
+      },
+      "ts": 1778314945033
+    }
+  ]
+}
