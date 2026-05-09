@@ -1,0 +1,123 @@
+{
+  "bootIso": "2026-05-09T10-32-25-316Z",
+  "role": "v2",
+  "cycle": 93,
+  "ts": 1778322832699,
+  "cycleRecord": {
+    "cycle": 93,
+    "agentRole": "v2",
+    "startedAt": 1778322831470,
+    "endedAt": 1778322832699,
+    "status": "cycle_failed_call",
+    "modelCalls": 1,
+    "totalTokens": 0,
+    "totalCostUsd": 0.020974,
+    "actionInvoked": null,
+    "memoryWrites": 0,
+    "dataIngestEvents": 0,
+    "failureReason": "{\"message\":\"Validation failed: Response is not valid JSON\",\"stack\":null,\"retryable\":false,\"retryCount\":0,\"code\":null}"
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 93,
+        "agentRole": "v2",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778322831575
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "1feb33e8-16a2-4cdc-b415-af72f379bb31",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778322831575
+      },
+      "ts": 1778322831575
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 2272,
+        "completionTokens": 12,
+        "cost": 0.0023079999999999997,
+        "executionId": "1feb33e8-16a2-4cdc-b415-af72f379bb31",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T10:33:51.899Z"
+      },
+      "ts": 1778322831899
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 2308,
+        "completionTokens": 38,
+        "cost": 0.0024219999999999997,
+        "executionId": "1feb33e8-16a2-4cdc-b415-af72f379bb31",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T10:33:52.399Z"
+      },
+      "ts": 1778322832399
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 2344,
+        "completionTokens": 7,
+        "cost": 0.002365,
+        "executionId": "1feb33e8-16a2-4cdc-b415-af72f379bb31",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T10:33:52.698Z"
+      },
+      "ts": 1778322832698
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "1feb33e8-16a2-4cdc-b415-af72f379bb31",
+        "from": "running",
+        "to": "failed",
+        "timestamp": 1778322832699
+      },
+      "ts": 1778322832699
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "1feb33e8-16a2-4cdc-b415-af72f379bb31",
+        "state": "failed",
+        "result": null,
+        "error": {
+          "message": "Validation failed: Response is not valid JSON",
+          "stack": null,
+          "retryable": false,
+          "retryCount": 0,
+          "code": null
+        }
+      },
+      "ts": 1778322832699
+    }
+  ]
+}
