@@ -1,0 +1,114 @@
+{
+  "bootIso": "2026-05-09T08-17-42-013Z",
+  "role": "v2",
+  "cycle": 6,
+  "ts": 1778314895173,
+  "cycleRecord": {
+    "cycle": 6,
+    "agentRole": "v2",
+    "startedAt": 1778314846575,
+    "endedAt": 1778314895172,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 1599,
+    "totalCostUsd": 0.007682,
+    "actionInvoked": {
+      "name": "web_search",
+      "args": {
+        "query": "how to configure IMAP SMTP for email"
+      },
+      "resultSummary": "{\"ok\":true,\"query\":\"how to configure IMAP SMTP for email\",\"provider\":\"firecrawl\",\"results\":[{\"title\":\"POP, IMAP, and SMTP settings for Outlook.com\",\"url\":\"https://support.microsoft.com/en-us/office/pop-imap-and-smtp-settings-for-outlook-com-d088b986-291d-42b8-9564-9c414e2aa040\",\"snippet\":\"Select Settings > Mail > Forwarding and IMAP. Under POP and IMAP, toggle the slider for Let devices and apps use POP or Let devices and apps use IMAP to ON ...\"},{\"title\":\"Set up IMAP or Exchange settings\",\"url"
+    },
+    "memoryWrites": 5,
+    "dataIngestEvents": 1,
+    "flag": {
+      "flagNodeId": "f0da0c58-e8d1-4b27-bd69-368b22f1d991",
+      "failedLawId": "reality",
+      "attemptsCount": 3
+    }
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 6,
+        "agentRole": "v2",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778314847180
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "41f3cc77-abca-4979-a3bd-3680fce77263",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778314847181
+      },
+      "ts": 1778314847181
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 1058,
+        "completionTokens": 541,
+        "cost": 0.0026810000000000002,
+        "executionId": "41f3cc77-abca-4979-a3bd-3680fce77263",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T08:20:49.455Z"
+      },
+      "ts": 1778314849455
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "41f3cc77-abca-4979-a3bd-3680fce77263",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778314849455
+      },
+      "ts": 1778314849455
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "41f3cc77-abca-4979-a3bd-3680fce77263",
+        "state": "complete",
+        "result": {
+          "text": "{\n  \"action\": \"web_search\",\n  \"args\": {\n    \"query\": \"how to configure IMAP SMTP for email\"\n  },\n  \"reasoning\": \"Find detailed steps to set up email IMAP/SMTP configuration so the agent can send emails.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 1058,
+            "completionTokens": 541
+          }
+        },
+        "error": null
+      },
+      "ts": 1778314849455
+    },
+    {
+      "event": "adapter_tool_call",
+      "data": {
+        "agentRole": "v2",
+        "adapter": "v2-local-actions",
+        "tool": "web_search",
+        "durationMs": 1811,
+        "success": true
+      },
+      "ts": 1778314851267
+    }
+  ]
+}
