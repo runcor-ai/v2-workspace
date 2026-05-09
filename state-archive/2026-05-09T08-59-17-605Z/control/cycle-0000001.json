@@ -1,0 +1,92 @@
+{
+  "bootIso": "2026-05-09T08-59-17-605Z",
+  "role": "control",
+  "cycle": 1,
+  "ts": 1778317209158,
+  "cycleRecord": {
+    "cycle": 1,
+    "agentRole": "control",
+    "startedAt": 1778317190658,
+    "endedAt": 1778317209158,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 2856,
+    "totalCostUsd": 0.00783,
+    "actionInvoked": null,
+    "memoryWrites": 0,
+    "dataIngestEvents": 0
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 1,
+        "agentRole": "control",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778317190769
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "86cde1c6-4bed-46e6-8c76-e9d34d6fcbf8",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778317190769
+      },
+      "ts": 1778317190769
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "control",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 787,
+        "completionTokens": 2069,
+        "cost": 0.006994,
+        "executionId": "86cde1c6-4bed-46e6-8c76-e9d34d6fcbf8",
+        "flowName": "naive-control-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T09:00:09.157Z"
+      },
+      "ts": 1778317209157
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "86cde1c6-4bed-46e6-8c76-e9d34d6fcbf8",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778317209157
+      },
+      "ts": 1778317209157
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "control",
+        "executionId": "86cde1c6-4bed-46e6-8c76-e9d34d6fcbf8",
+        "state": "complete",
+        "result": {
+          "text": "\n\n{\n  \"action\": \"none\",\n  \"payload\": {},\n  \"thought\": \"Insufficient resource motivation to initiate action; maintaining current state.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 787,
+            "completionTokens": 2069
+          }
+        },
+        "error": null
+      },
+      "ts": 1778317209157
+    }
+  ]
+}
