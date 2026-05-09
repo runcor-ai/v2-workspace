@@ -1,0 +1,123 @@
+{
+  "bootIso": "2026-05-09T09-20-45-061Z",
+  "role": "v2",
+  "cycle": 31,
+  "ts": 1778318501165,
+  "cycleRecord": {
+    "cycle": 31,
+    "agentRole": "v2",
+    "startedAt": 1778318476159,
+    "endedAt": 1778318501165,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 1383,
+    "totalCostUsd": 0.002946,
+    "actionInvoked": {
+      "name": "v2-local-actions.inbox_read",
+      "args": {
+        "n": 10
+      },
+      "resultSummary": "ERROR: {\"ok\":false,\"error\":\"email_unconfigured\",\"hint\":\"RUNNER_EMAIL_USER/PASS/IMAP_HOST/SMTP_HOST not set\"}"
+    },
+    "memoryWrites": 1,
+    "dataIngestEvents": 0
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 31,
+        "agentRole": "v2",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778318476498
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "77243104-f3d5-427a-ba45-5f0e32734b40",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778318476498
+      },
+      "ts": 1778318476498
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 1330,
+        "completionTokens": 53,
+        "cost": 0.001489,
+        "executionId": "77243104-f3d5-427a-ba45-5f0e32734b40",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T09:21:32.856Z"
+      },
+      "ts": 1778318492857
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "77243104-f3d5-427a-ba45-5f0e32734b40",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778318492857
+      },
+      "ts": 1778318492857
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "77243104-f3d5-427a-ba45-5f0e32734b40",
+        "state": "complete",
+        "result": {
+          "text": "{\n  \"action\": \"v2-local-actions.inbox_read\",\n  \"args\": { \"n\": 10 },\n  \"reasoning\": \"Triage inbox to assess priorities before making any decisions as the CEO's first cycle of the day.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 1330,
+            "completionTokens": 53
+          }
+        },
+        "error": null
+      },
+      "ts": 1778318492857
+    },
+    {
+      "event": "adapter_tool_call",
+      "data": {
+        "agentRole": "v2",
+        "adapter": "v2-local-actions",
+        "tool": "inbox_read",
+        "durationMs": 1,
+        "success": true
+      },
+      "ts": 1778318492858
+    },
+    {
+      "event": "side_effect_error",
+      "data": {
+        "cycle": 31,
+        "agentRole": "v2",
+        "errors": [
+          {
+            "step": "data_ingest",
+            "error": "Unexpected token 'W', \"We need to\"... is not valid JSON"
+          }
+        ]
+      },
+      "ts": 1778318501165
+    }
+  ]
+}
