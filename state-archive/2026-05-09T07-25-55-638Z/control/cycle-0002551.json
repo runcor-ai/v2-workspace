@@ -1,0 +1,123 @@
+{
+  "bootIso": "2026-05-09T07-25-55-638Z",
+  "role": "control",
+  "cycle": 2551,
+  "ts": 1778312865422,
+  "cycleRecord": {
+    "cycle": 2551,
+    "agentRole": "control",
+    "startedAt": 1778312829251,
+    "endedAt": 1778312865422,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 2820,
+    "totalCostUsd": 0.041777999999999996,
+    "actionInvoked": {
+      "name": "v2-local-actions.firecrawl_scrape",
+      "args": {
+        "url": "https://www.oracle.com/artificial-intelligence/ai-agents/ai-agent-use-cases/"
+      },
+      "resultSummary": "tool_dispatch_error: Adapter \"v2-local-actions\" operation timed out after 30000ms"
+    },
+    "memoryWrites": 1,
+    "dataIngestEvents": 0
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 2551,
+        "agentRole": "control",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778312829576
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "4f644a33-2598-4e82-b53d-759eff2976b0",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778312829576
+      },
+      "ts": 1778312829576
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "control",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 2470,
+        "completionTokens": 350,
+        "cost": 0.0035199999999999997,
+        "executionId": "4f644a33-2598-4e82-b53d-759eff2976b0",
+        "flowName": "naive-control-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T07:47:14.959Z"
+      },
+      "ts": 1778312834959
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "4f644a33-2598-4e82-b53d-759eff2976b0",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778312834959
+      },
+      "ts": 1778312834959
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "control",
+        "executionId": "4f644a33-2598-4e82-b53d-759eff2976b0",
+        "state": "complete",
+        "result": {
+          "text": "\n\n{\n  \"action\": \"v2-local-actions.firecrawl_scrape\",\n  \"payload\": {\n    \"url\": \"https://www.oracle.com/artificial-intelligence/ai-agents/ai-agent-use-cases/\"\n  },\n  \"thought\": \"Scrape the Oracle AI agent use cases page to resolve the persistent 'not_cached' error and make the resource available.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 2470,
+            "completionTokens": 350
+          }
+        },
+        "error": null
+      },
+      "ts": 1778312834959
+    },
+    {
+      "event": "adapter_tool_call",
+      "data": {
+        "agentRole": "control",
+        "adapter": "v2-local-actions",
+        "tool": "firecrawl_scrape",
+        "durationMs": 30001,
+        "success": false
+      },
+      "ts": 1778312864960
+    },
+    {
+      "event": "side_effect_error",
+      "data": {
+        "cycle": 2551,
+        "agentRole": "control",
+        "errors": [
+          {
+            "step": "data_ingest",
+            "error": "Unexpected token 'W', \"We need to\"... is not valid JSON"
+          }
+        ]
+      },
+      "ts": 1778312865422
+    }
+  ]
+}
