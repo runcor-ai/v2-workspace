@@ -1,0 +1,123 @@
+{
+  "bootIso": "2026-05-09T08-33-57-708Z",
+  "role": "control",
+  "cycle": 53,
+  "ts": 1778316418352,
+  "cycleRecord": {
+    "cycle": 53,
+    "agentRole": "control",
+    "startedAt": 1778316411879,
+    "endedAt": 1778316418351,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 1236,
+    "totalCostUsd": 0.03873400000000001,
+    "actionInvoked": {
+      "name": "v2-local-actions.fs_read",
+      "args": {
+        "path": "email_config_issue.txt"
+      },
+      "resultSummary": "ERROR: {\"ok\":false,\"error\":\"not_found\"}"
+    },
+    "memoryWrites": 1,
+    "dataIngestEvents": 0
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 53,
+        "agentRole": "control",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778316412128
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "31117909-d78d-4a12-a24a-bf6251df6407",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778316412128
+      },
+      "ts": 1778316412128
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "control",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 990,
+        "completionTokens": 246,
+        "cost": 0.001728,
+        "executionId": "31117909-d78d-4a12-a24a-bf6251df6407",
+        "flowName": "naive-control-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T08:46:53.319Z"
+      },
+      "ts": 1778316413319
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "31117909-d78d-4a12-a24a-bf6251df6407",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778316413319
+      },
+      "ts": 1778316413319
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "control",
+        "executionId": "31117909-d78d-4a12-a24a-bf6251df6407",
+        "state": "complete",
+        "result": {
+          "text": "{\n  \"action\": \"v2-local-actions.fs_read\",\n  \"payload\": {\n    \"path\": \"email_config_issue.txt\"\n  },\n  \"thought\": \"Read the email configuration issue to understand which variables are missing.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 990,
+            "completionTokens": 246
+          }
+        },
+        "error": null
+      },
+      "ts": 1778316413319
+    },
+    {
+      "event": "adapter_tool_call",
+      "data": {
+        "agentRole": "control",
+        "adapter": "v2-local-actions",
+        "tool": "fs_read",
+        "durationMs": 1,
+        "success": true
+      },
+      "ts": 1778316413321
+    },
+    {
+      "event": "side_effect_error",
+      "data": {
+        "cycle": 53,
+        "agentRole": "control",
+        "errors": [
+          {
+            "step": "data_ingest",
+            "error": "Unexpected token 'W', \"We need to\"... is not valid JSON"
+          }
+        ]
+      },
+      "ts": 1778316418351
+    }
+  ]
+}
