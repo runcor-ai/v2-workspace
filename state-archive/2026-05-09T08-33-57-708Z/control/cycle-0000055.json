@@ -1,0 +1,110 @@
+{
+  "bootIso": "2026-05-09T08-33-57-708Z",
+  "role": "control",
+  "cycle": 55,
+  "ts": 1778316500067,
+  "cycleRecord": {
+    "cycle": 55,
+    "agentRole": "control",
+    "startedAt": 1778316490693,
+    "endedAt": 1778316500066,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 1451,
+    "totalCostUsd": 0.04227200000000001,
+    "actionInvoked": {
+      "name": "github_create_issue",
+      "args": {
+        "title": "Email configuration missing",
+        "body": "The agent's email is unconfigured: missing RUNNER_EMAIL_USER, RUNNER_EMAIL_PASS, IMAP_HOST, and SMTP_HOST. See email_config_issue_log and inbox_check_log for details."
+      },
+      "resultSummary": "ERROR: {\"ok\":false,\"error\":\"repo required (owner/name)\"}"
+    },
+    "memoryWrites": 1,
+    "dataIngestEvents": 1
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 55,
+        "agentRole": "control",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778316490813
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "d58049f7-2308-4fc1-ae81-96367e8d4238",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778316490813
+      },
+      "ts": 1778316490813
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "control",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 990,
+        "completionTokens": 461,
+        "cost": 0.002373,
+        "executionId": "d58049f7-2308-4fc1-ae81-96367e8d4238",
+        "flowName": "naive-control-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T08:48:12.747Z"
+      },
+      "ts": 1778316492748
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "d58049f7-2308-4fc1-ae81-96367e8d4238",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778316492748
+      },
+      "ts": 1778316492748
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "control",
+        "executionId": "d58049f7-2308-4fc1-ae81-96367e8d4238",
+        "state": "complete",
+        "result": {
+          "text": "{\n  \"action\": \"github_create_issue\",\n  \"payload\": {\n    \"title\": \"Email configuration missing\",\n    \"body\": \"The agent's email is unconfigured: missing RUNNER_EMAIL_USER, RUNNER_EMAIL_PASS, IMAP_HOST, and SMTP_HOST. See email_config_issue_log and inbox_check_log for details.\"\n  },\n  \"thought\": \"Create a GitHub issue to track the email configuration problem so it can be addressed later.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 990,
+            "completionTokens": 461
+          }
+        },
+        "error": null
+      },
+      "ts": 1778316492748
+    },
+    {
+      "event": "adapter_tool_call",
+      "data": {
+        "agentRole": "control",
+        "adapter": "v2-local-actions",
+        "tool": "github_create_issue",
+        "durationMs": 0,
+        "success": true
+      },
+      "ts": 1778316492748
+    }
+  ]
+}
