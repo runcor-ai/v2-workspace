@@ -1,0 +1,75 @@
+{
+  "bootIso": "2026-05-09T09-05-21-531Z",
+  "role": "v2",
+  "cycle": 19,
+  "ts": 1778318039669,
+  "cycleRecord": {
+    "cycle": 19,
+    "agentRole": "v2",
+    "startedAt": 1778318009518,
+    "endedAt": 1778318039668,
+    "status": "cycle_failed_call",
+    "modelCalls": 1,
+    "totalTokens": 0,
+    "totalCostUsd": 0.018241,
+    "actionInvoked": null,
+    "memoryWrites": 0,
+    "dataIngestEvents": 0,
+    "failureReason": "{\"message\":\"Execution timed out after 30000ms\",\"stack\":null,\"retryable\":false,\"retryCount\":0,\"code\":\"TIMEOUT\"}"
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 19,
+        "agentRole": "v2",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778318009668
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "7f174766-e804-48a4-b70c-54df5f06d53f",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778318009668
+      },
+      "ts": 1778318009668
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "7f174766-e804-48a4-b70c-54df5f06d53f",
+        "from": "running",
+        "to": "failed",
+        "timestamp": 1778318039668
+      },
+      "ts": 1778318039668
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "7f174766-e804-48a4-b70c-54df5f06d53f",
+        "state": "failed",
+        "result": null,
+        "error": {
+          "message": "Execution timed out after 30000ms",
+          "stack": null,
+          "retryable": false,
+          "retryCount": 0,
+          "code": "TIMEOUT"
+        }
+      },
+      "ts": 1778318039668
+    }
+  ]
+}
