@@ -1,0 +1,109 @@
+{
+  "bootIso": "2026-05-09T09-00-23-295Z",
+  "role": "control",
+  "cycle": 2,
+  "ts": 1778317236499,
+  "cycleRecord": {
+    "cycle": 2,
+    "agentRole": "control",
+    "startedAt": 1778317223894,
+    "endedAt": 1778317236498,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 2143,
+    "totalCostUsd": 0.004855,
+    "actionInvoked": {
+      "name": "v2-local-actions.inbox_read",
+      "args": {
+        "n": 5
+      },
+      "resultSummary": "ERROR: {\"ok\":false,\"error\":\"email_unconfigured\",\"hint\":\"RUNNER_EMAIL_USER/PASS/IMAP_HOST/SMTP_HOST not set\"}"
+    },
+    "memoryWrites": 1,
+    "dataIngestEvents": 1
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 2,
+        "agentRole": "control",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778317224093
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "5ac5a576-ecfc-4804-9101-5d27968e380c",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778317224093
+      },
+      "ts": 1778317224093
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "control",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 787,
+        "completionTokens": 1356,
+        "cost": 0.004855,
+        "executionId": "5ac5a576-ecfc-4804-9101-5d27968e380c",
+        "flowName": "naive-control-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T09:00:29.842Z"
+      },
+      "ts": 1778317229843
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "5ac5a576-ecfc-4804-9101-5d27968e380c",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778317229843
+      },
+      "ts": 1778317229843
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "control",
+        "executionId": "5ac5a576-ecfc-4804-9101-5d27968e380c",
+        "state": "complete",
+        "result": {
+          "text": "{\n  \"action\": \"v2-local-actions.inbox_read\",\n  \"payload\": {\n    \"n\": 5\n  },\n  \"thought\": \"Checking inbox for new messages to stay informed.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 787,
+            "completionTokens": 1356
+          }
+        },
+        "error": null
+      },
+      "ts": 1778317229844
+    },
+    {
+      "event": "adapter_tool_call",
+      "data": {
+        "agentRole": "control",
+        "adapter": "v2-local-actions",
+        "tool": "inbox_read",
+        "durationMs": 0,
+        "success": true
+      },
+      "ts": 1778317229845
+    }
+  ]
+}
