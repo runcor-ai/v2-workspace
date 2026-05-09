@@ -1,0 +1,92 @@
+{
+  "bootIso": "2026-05-09T08-17-42-013Z",
+  "role": "control",
+  "cycle": 23,
+  "ts": 1778315335513,
+  "cycleRecord": {
+    "cycle": 23,
+    "agentRole": "control",
+    "startedAt": 1778315334429,
+    "endedAt": 1778315335513,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 910,
+    "totalCostUsd": 0.020361,
+    "actionInvoked": null,
+    "memoryWrites": 0,
+    "dataIngestEvents": 0
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 23,
+        "agentRole": "control",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778315334657
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "25e23efb-aa29-4808-b427-910ef2c015a1",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778315334657
+      },
+      "ts": 1778315334657
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "control",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 789,
+        "completionTokens": 121,
+        "cost": 0.001152,
+        "executionId": "25e23efb-aa29-4808-b427-910ef2c015a1",
+        "flowName": "naive-control-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T08:28:55.512Z"
+      },
+      "ts": 1778315335512
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "25e23efb-aa29-4808-b427-910ef2c015a1",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778315335512
+      },
+      "ts": 1778315335512
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "control",
+        "executionId": "25e23efb-aa29-4808-b427-910ef2c015a1",
+        "state": "complete",
+        "result": {
+          "text": "{\n  \"action\": \"none\",\n  \"payload\": {},\n  \"thought\": \"No immediate need to act; conserving resources aligns with dominant drive.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 789,
+            "completionTokens": 121
+          }
+        },
+        "error": null
+      },
+      "ts": 1778315335512
+    }
+  ]
+}
