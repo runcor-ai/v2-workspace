@@ -1,0 +1,110 @@
+{
+  "bootIso": "2026-05-09T08-17-42-013Z",
+  "role": "control",
+  "cycle": 28,
+  "ts": 1778315522542,
+  "cycleRecord": {
+    "cycle": 28,
+    "agentRole": "control",
+    "startedAt": 1778315505430,
+    "endedAt": 1778315522541,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 919,
+    "totalCostUsd": 0.027895999999999997,
+    "actionInvoked": {
+      "name": "fs_write",
+      "args": {
+        "path": "email_config_issue.txt",
+        "content": "Email is unconfigured: missing RUNNER_EMAIL_USER/PASS/IMAP_HOST/SMTP_HOST"
+      },
+      "resultSummary": "{\"ok\":true,\"sizeBytes\":73,\"ts\":1778315510719}"
+    },
+    "memoryWrites": 1,
+    "dataIngestEvents": 1
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 28,
+        "agentRole": "control",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778315505602
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "fc92fbe0-6107-4e1f-b84a-46959a5c536f",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778315505602
+      },
+      "ts": 1778315505602
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "control",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 852,
+        "completionTokens": 67,
+        "cost": 0.0010530000000000001,
+        "executionId": "fc92fbe0-6107-4e1f-b84a-46959a5c536f",
+        "flowName": "naive-control-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T08:31:50.718Z"
+      },
+      "ts": 1778315510718
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "control",
+        "executionId": "fc92fbe0-6107-4e1f-b84a-46959a5c536f",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778315510718
+      },
+      "ts": 1778315510718
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "control",
+        "executionId": "fc92fbe0-6107-4e1f-b84a-46959a5c536f",
+        "state": "complete",
+        "result": {
+          "text": "{\n  \"action\": \"fs_write\",\n  \"payload\": {\n    \"path\": \"email_config_issue.txt\",\n    \"content\": \"Email is unconfigured: missing RUNNER_EMAIL_USER/PASS/IMAP_HOST/SMTP_HOST\"\n  },\n  \"thought\": \"Record the email configuration issue for future reference.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 852,
+            "completionTokens": 67
+          }
+        },
+        "error": null
+      },
+      "ts": 1778315510718
+    },
+    {
+      "event": "adapter_tool_call",
+      "data": {
+        "agentRole": "control",
+        "adapter": "v2-local-actions",
+        "tool": "fs_write",
+        "durationMs": 1,
+        "success": true
+      },
+      "ts": 1778315510719
+    }
+  ]
+}
