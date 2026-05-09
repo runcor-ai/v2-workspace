@@ -1,0 +1,108 @@
+{
+  "bootIso": "2026-05-09T09-20-45-061Z",
+  "role": "v2",
+  "cycle": 46,
+  "ts": 1778319256408,
+  "cycleRecord": {
+    "cycle": 46,
+    "agentRole": "v2",
+    "startedAt": 1778319255483,
+    "endedAt": 1778319256408,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 1547,
+    "totalCostUsd": 0.044153000000000005,
+    "actionInvoked": null,
+    "memoryWrites": 0,
+    "dataIngestEvents": 0
+  },
+  "events": [
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 1483,
+        "completionTokens": 5857,
+        "cost": 0.019054,
+        "executionId": "28bc6ca1-a085-4eaf-91b4-c1a5bcb278c7",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T09:33:52.213Z"
+      },
+      "ts": 1778319232213
+    },
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 46,
+        "agentRole": "v2",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1778319255686
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "4de504ce-768b-4dbc-939d-23371ea3a598",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1778319255686
+      },
+      "ts": 1778319255686
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 1483,
+        "completionTokens": 64,
+        "cost": 0.0016749999999999998,
+        "executionId": "4de504ce-768b-4dbc-939d-23371ea3a598",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-09T09:34:16.404Z"
+      },
+      "ts": 1778319256404
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "4de504ce-768b-4dbc-939d-23371ea3a598",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1778319256404
+      },
+      "ts": 1778319256404
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "4de504ce-768b-4dbc-939d-23371ea3a598",
+        "state": "complete",
+        "result": {
+          "text": "We are at cycle 46, day 0 of this run.\n The first cycle of each day requires triaging the inbox? Not needed. The user wants JSON with reasoning. Ensure correct formatting. One short sentence: As CEO, first cycle of each day: triage inbox? Not needed.",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 1483,
+            "completionTokens": 64
+          }
+        },
+        "error": null
+      },
+      "ts": 1778319256404
+    }
+  ]
+}
