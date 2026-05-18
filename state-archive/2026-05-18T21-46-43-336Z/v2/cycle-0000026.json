@@ -1,0 +1,121 @@
+{
+  "bootIso": "2026-05-18T21-46-43-336Z",
+  "role": "v2",
+  "cycle": 26,
+  "ts": 1779142610026,
+  "cycleRecord": {
+    "cycle": 26,
+    "agentRole": "v2",
+    "startedAt": 1779142576433,
+    "endedAt": 1779142610024,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 7645,
+    "totalCostUsd": 0.281145,
+    "actionInvoked": {
+      "name": "email_send",
+      "args": {},
+      "resultSummary": "ERROR: {\"ok\":false,\"error\":\"email_unconfigured\"}"
+    },
+    "memoryWrites": 1,
+    "dataIngestEvents": 0
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 26,
+        "agentRole": "v2",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1779142576715
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "4db811fa-3e0b-4771-bf6b-ce335448ee4f",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1779142576715
+      },
+      "ts": 1779142576715
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 2244,
+        "completionTokens": 5401,
+        "cost": 0.018447,
+        "executionId": "4db811fa-3e0b-4771-bf6b-ce335448ee4f",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-18T22:16:48.073Z"
+      },
+      "ts": 1779142608073
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "4db811fa-3e0b-4771-bf6b-ce335448ee4f",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1779142608073
+      },
+      "ts": 1779142608074
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "4db811fa-3e0b-4771-bf6b-ce335448ee4f",
+        "state": "complete",
+        "result": {
+          "text": "\n{\n  \"action\": \"email_send\",\n  \"args\": {},\n  \"reasoning\": \"Attempt to send an email to test configuration and react to the reactivity drive, as reactivity is the dominant drive and email_send is a reactive capability.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 2244,
+            "completionTokens": 5401
+          }
+        },
+        "error": null
+      },
+      "ts": 1779142608074
+    },
+    {
+      "event": "adapter_tool_call",
+      "data": {
+        "agentRole": "v2",
+        "adapter": "v2-local-actions",
+        "tool": "email_send",
+        "durationMs": 1,
+        "success": true
+      },
+      "ts": 1779142608076
+    },
+    {
+      "event": "side_effect_error",
+      "data": {
+        "cycle": 26,
+        "agentRole": "v2",
+        "errors": [
+          {
+            "step": "data_ingest",
+            "error": "Bad control character in string literal in JSON at position 51 (line 2 column 50)"
+          }
+        ]
+      },
+      "ts": 1779142610024
+    }
+  ]
+}
