@@ -1,0 +1,109 @@
+{
+  "bootIso": "2026-05-18T21-46-43-336Z",
+  "role": "v2",
+  "cycle": 22,
+  "ts": 1779142473877,
+  "cycleRecord": {
+    "cycle": 22,
+    "agentRole": "v2",
+    "startedAt": 1779142450814,
+    "endedAt": 1779142473875,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 5522,
+    "totalCostUsd": 0.213793,
+    "actionInvoked": {
+      "name": "inbox_read",
+      "args": {
+        "N": 5
+      },
+      "resultSummary": "ERROR: {\"ok\":false,\"error\":\"email_unconfigured\",\"hint\":\"RUNNER_EMAIL_USER/PASS/IMAP_HOST/SMTP_HOST not set\"}"
+    },
+    "memoryWrites": 2,
+    "dataIngestEvents": 1
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 22,
+        "agentRole": "v2",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1779142450960
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "d4455820-6985-41bb-84c5-9fabf1960d69",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1779142450960
+      },
+      "ts": 1779142450961
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 2173,
+        "completionTokens": 3349,
+        "cost": 0.01222,
+        "executionId": "d4455820-6985-41bb-84c5-9fabf1960d69",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-18T22:14:23.907Z"
+      },
+      "ts": 1779142463907
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "d4455820-6985-41bb-84c5-9fabf1960d69",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1779142463907
+      },
+      "ts": 1779142463907
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "d4455820-6985-41bb-84c5-9fabf1960d69",
+        "state": "complete",
+        "result": {
+          "text": "{\n  \"action\": \"inbox_read\",\n  \"args\": {\"N\": 5},\n  \"reasoning\": \"Check inbox for new emails to react to, as reactivity is the dominant drive.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 2173,
+            "completionTokens": 3349
+          }
+        },
+        "error": null
+      },
+      "ts": 1779142463908
+    },
+    {
+      "event": "adapter_tool_call",
+      "data": {
+        "agentRole": "v2",
+        "adapter": "v2-local-actions",
+        "tool": "inbox_read",
+        "durationMs": 0,
+        "success": true
+      },
+      "ts": 1779142463908
+    }
+  ]
+}
