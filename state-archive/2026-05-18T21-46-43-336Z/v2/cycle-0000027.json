@@ -1,0 +1,91 @@
+{
+  "bootIso": "2026-05-18T21-46-43-336Z",
+  "role": "v2",
+  "cycle": 27,
+  "ts": 1779142703287,
+  "cycleRecord": {
+    "cycle": 27,
+    "agentRole": "v2",
+    "startedAt": 1779142613040,
+    "endedAt": 1779142703285,
+    "status": "cycle_failed_call",
+    "modelCalls": 1,
+    "totalTokens": 0,
+    "totalCostUsd": 0.332541,
+    "actionInvoked": null,
+    "memoryWrites": 0,
+    "dataIngestEvents": 0,
+    "failureReason": "{\"message\":\"Execution timed out after 90000ms\",\"stack\":null,\"retryable\":false,\"retryCount\":0,\"code\":\"TIMEOUT\"}"
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 27,
+        "agentRole": "v2",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1779142613280
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "839fb6c3-31a5-4186-a613-9d683326c386",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1779142613280
+      },
+      "ts": 1779142613280
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 2244,
+        "completionTokens": 16384,
+        "cost": 0.051396000000000004,
+        "executionId": "839fb6c3-31a5-4186-a613-9d683326c386",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-18T22:18:11.806Z"
+      },
+      "ts": 1779142691807
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "839fb6c3-31a5-4186-a613-9d683326c386",
+        "from": "running",
+        "to": "failed",
+        "timestamp": 1779142703283
+      },
+      "ts": 1779142703284
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "839fb6c3-31a5-4186-a613-9d683326c386",
+        "state": "failed",
+        "result": null,
+        "error": {
+          "message": "Execution timed out after 90000ms",
+          "stack": null,
+          "retryable": false,
+          "retryCount": 0,
+          "code": "TIMEOUT"
+        }
+      },
+      "ts": 1779142703284
+    }
+  ]
+}
