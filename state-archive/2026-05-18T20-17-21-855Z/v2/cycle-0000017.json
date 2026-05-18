@@ -1,0 +1,113 @@
+{
+  "bootIso": "2026-05-18T20-17-21-855Z",
+  "role": "v2",
+  "cycle": 17,
+  "ts": 1779135799652,
+  "cycleRecord": {
+    "cycle": 17,
+    "agentRole": "v2",
+    "startedAt": 1779135792430,
+    "endedAt": 1779135799651,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 1630,
+    "totalCostUsd": 0.038681999999999994,
+    "actionInvoked": {
+      "name": "v2-local-actions.inbox_read",
+      "args": {
+        "N": 10
+      },
+      "resultSummary": "ERROR: {\"ok\":false,\"error\":\"email_unconfigured\",\"hint\":\"RUNNER_EMAIL_USER/PASS/IMAP_HOST/SMTP_HOST not set\"}"
+    },
+    "memoryWrites": 3,
+    "dataIngestEvents": 1
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 17,
+        "agentRole": "v2",
+        "memoryRecallQuery": "Goal: Identify and label all actionable items in the inbox within the next 3 cycles.. Drive: resource. Last plan: .",
+        "nonEmptyLayers": [
+          "laws",
+          "reality",
+          "drives",
+          "goals",
+          "identity",
+          "capabilities",
+          "memory_recall"
+        ]
+      },
+      "ts": 1779135792928
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "07a81a3d-818f-4fa6-a02e-3a1833f465a9",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1779135792928
+      },
+      "ts": 1779135792928
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 1531,
+        "completionTokens": 99,
+        "cost": 0.001828,
+        "executionId": "07a81a3d-818f-4fa6-a02e-3a1833f465a9",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-18T20:23:19.047Z"
+      },
+      "ts": 1779135799048
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "07a81a3d-818f-4fa6-a02e-3a1833f465a9",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1779135799048
+      },
+      "ts": 1779135799048
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "07a81a3d-818f-4fa6-a02e-3a1833f465a9",
+        "state": "complete",
+        "result": {
+          "text": "{\n  \"action\": \"v2-local-actions.inbox_read\",\n  \"args\": {\n    \"N\": 10\n  },\n  \"reasoning\": \"Read the inbox to see what messages are present so we can identify and label actionable items.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 1531,
+            "completionTokens": 99
+          }
+        },
+        "error": null
+      },
+      "ts": 1779135799049
+    },
+    {
+      "event": "adapter_tool_call",
+      "data": {
+        "agentRole": "v2",
+        "adapter": "v2-local-actions",
+        "tool": "inbox_read",
+        "durationMs": 0,
+        "success": true
+      },
+      "ts": 1779135799050
+    }
+  ]
+}
