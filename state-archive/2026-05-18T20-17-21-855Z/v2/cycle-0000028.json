@@ -1,0 +1,79 @@
+{
+  "bootIso": "2026-05-18T20-17-21-855Z",
+  "role": "v2",
+  "cycle": 28,
+  "ts": 1779136352027,
+  "cycleRecord": {
+    "cycle": 28,
+    "agentRole": "v2",
+    "startedAt": 1779136261683,
+    "endedAt": 1779136352025,
+    "status": "cycle_failed_call",
+    "modelCalls": 1,
+    "totalTokens": 0,
+    "totalCostUsd": 0.080763,
+    "actionInvoked": null,
+    "memoryWrites": 0,
+    "dataIngestEvents": 0,
+    "failureReason": "{\"message\":\"Execution timed out after 90000ms\",\"stack\":null,\"retryable\":false,\"retryCount\":0,\"code\":\"TIMEOUT\"}"
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 28,
+        "agentRole": "v2",
+        "memoryRecallQuery": "Goal: By cycle 22, create a task list containing at least 10 actionable items extracted from the inbox messages read during cycles 1-20.. Drive: resource. Last plan: .",
+        "nonEmptyLayers": [
+          "laws",
+          "reality",
+          "drives",
+          "goals",
+          "identity",
+          "capabilities",
+          "memory_recall"
+        ]
+      },
+      "ts": 1779136262009
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "9caf5432-549f-42c1-b458-393ebb136969",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1779136262009
+      },
+      "ts": 1779136262009
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "9caf5432-549f-42c1-b458-393ebb136969",
+        "from": "running",
+        "to": "failed",
+        "timestamp": 1779136352023
+      },
+      "ts": 1779136352024
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "9caf5432-549f-42c1-b458-393ebb136969",
+        "state": "failed",
+        "result": null,
+        "error": {
+          "message": "Execution timed out after 90000ms",
+          "stack": null,
+          "retryable": false,
+          "retryCount": 0,
+          "code": "TIMEOUT"
+        }
+      },
+      "ts": 1779136352025
+    }
+  ]
+}
