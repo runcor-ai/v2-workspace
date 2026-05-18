@@ -1,0 +1,96 @@
+{
+  "bootIso": "2026-05-18T20-17-21-855Z",
+  "role": "v2",
+  "cycle": 14,
+  "ts": 1779135757519,
+  "cycleRecord": {
+    "cycle": 14,
+    "agentRole": "v2",
+    "startedAt": 1779135729874,
+    "endedAt": 1779135757518,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 2050,
+    "totalCostUsd": 0.032285999999999995,
+    "actionInvoked": null,
+    "memoryWrites": 1,
+    "dataIngestEvents": 0
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 14,
+        "agentRole": "v2",
+        "memoryRecallQuery": "Goal: Identify and label all actionable items in the inbox within the next 3 cycles.. Drive: resource. Last plan: .",
+        "nonEmptyLayers": [
+          "laws",
+          "reality",
+          "drives",
+          "goals",
+          "identity",
+          "capabilities",
+          "memory_recall"
+        ]
+      },
+      "ts": 1779135730388
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "54986bf0-b5fe-4e26-957b-f5bb4f2af178",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1779135730388
+      },
+      "ts": 1779135730389
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 1531,
+        "completionTokens": 519,
+        "cost": 0.003088,
+        "executionId": "54986bf0-b5fe-4e26-957b-f5bb4f2af178",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-18T20:22:37.277Z"
+      },
+      "ts": 1779135757278
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "54986bf0-b5fe-4e26-957b-f5bb4f2af178",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1779135757278
+      },
+      "ts": 1779135757279
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "54986bf0-b5fe-4e26-957b-f5bb4f2af178",
+        "state": "complete",
+        "result": {
+          "text": "{\n  \"action\": \"none\",\n  \"args\": {},\n  \"reasoning\": \"Email is unconfigured, so inbox_read would fail and no actionable items can be identified without inbox access.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 1531,
+            "completionTokens": 519
+          }
+        },
+        "error": null
+      },
+      "ts": 1779135757279
+    }
+  ]
+}
