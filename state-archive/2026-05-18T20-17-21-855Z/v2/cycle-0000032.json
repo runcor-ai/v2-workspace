@@ -1,0 +1,79 @@
+{
+  "bootIso": "2026-05-18T20-17-21-855Z",
+  "role": "v2",
+  "cycle": 32,
+  "ts": 1779136603559,
+  "cycleRecord": {
+    "cycle": 32,
+    "agentRole": "v2",
+    "startedAt": 1779136561211,
+    "endedAt": 1779136603558,
+    "status": "cycle_failed_call",
+    "modelCalls": 1,
+    "totalTokens": 0,
+    "totalCostUsd": 0.10641999999999999,
+    "actionInvoked": null,
+    "memoryWrites": 0,
+    "dataIngestEvents": 0,
+    "failureReason": "{\"message\":\"All providers failed for model request.\",\"stack\":null,\"retryable\":false,\"retryCount\":0,\"code\":null}"
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 32,
+        "agentRole": "v2",
+        "memoryRecallQuery": "Goal: Create a README in each of the two newly created GitHub repositories that lists the three most common request types observed in the inbox over the last 15 reads.. Drive: resource. Last plan: .",
+        "nonEmptyLayers": [
+          "laws",
+          "reality",
+          "drives",
+          "goals",
+          "identity",
+          "capabilities",
+          "memory_recall"
+        ]
+      },
+      "ts": 1779136561750
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "dfcc88fc-ec0d-4474-a9d5-155c5be30d71",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1779136561750
+      },
+      "ts": 1779136561751
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "dfcc88fc-ec0d-4474-a9d5-155c5be30d71",
+        "from": "running",
+        "to": "failed",
+        "timestamp": 1779136603557
+      },
+      "ts": 1779136603558
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "dfcc88fc-ec0d-4474-a9d5-155c5be30d71",
+        "state": "failed",
+        "result": null,
+        "error": {
+          "message": "All providers failed for model request.",
+          "stack": null,
+          "retryable": false,
+          "retryCount": 0,
+          "code": null
+        }
+      },
+      "ts": 1779136603558
+    }
+  ]
+}
