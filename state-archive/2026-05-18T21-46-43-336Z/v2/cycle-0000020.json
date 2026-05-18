@@ -1,0 +1,125 @@
+{
+  "bootIso": "2026-05-18T21-46-43-336Z",
+  "role": "v2",
+  "cycle": 20,
+  "ts": 1779142434082,
+  "cycleRecord": {
+    "cycle": 20,
+    "agentRole": "v2",
+    "startedAt": 1779142346601,
+    "endedAt": 1779142434080,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 3119,
+    "totalCostUsd": 0.193517,
+    "actionInvoked": {
+      "name": "v2-local-actions.inbox_read",
+      "args": {},
+      "resultSummary": "ERROR: {\"ok\":false,\"error\":\"email_unconfigured\",\"hint\":\"RUNNER_EMAIL_USER/PASS/IMAP_HOST/SMTP_HOST not set\"}"
+    },
+    "memoryWrites": 2,
+    "dataIngestEvents": 1
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 20,
+        "agentRole": "v2",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1779142346771
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "092a933b-0e1e-4787-8179-392b6573e30b",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1779142346771
+      },
+      "ts": 1779142346771
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 2177,
+        "completionTokens": 942,
+        "cost": 0.0050030000000000005,
+        "executionId": "092a933b-0e1e-4787-8179-392b6573e30b",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-18T22:12:32.728Z"
+      },
+      "ts": 1779142352728
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "092a933b-0e1e-4787-8179-392b6573e30b",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1779142352728
+      },
+      "ts": 1779142352729
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "092a933b-0e1e-4787-8179-392b6573e30b",
+        "state": "complete",
+        "result": {
+          "text": "\n\n{\n  \"action\": \"v2-local-actions.inbox_read\",\n  \"args\": {},\n  \"reasoning\": \"Check inbox for new emails to react to, as reactivity is the dominant drive.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 2177,
+            "completionTokens": 942
+          }
+        },
+        "error": null
+      },
+      "ts": 1779142352729
+    },
+    {
+      "event": "adapter_tool_call",
+      "data": {
+        "agentRole": "v2",
+        "adapter": "v2-local-actions",
+        "tool": "inbox_read",
+        "durationMs": 0,
+        "success": true
+      },
+      "ts": 1779142352729
+    },
+    {
+      "event": "side_effect_error",
+      "data": {
+        "cycle": 20,
+        "agentRole": "v2",
+        "errors": [
+          {
+            "step": "identity_reflect",
+            "error": "OpenRouter openrouter/meta-llama/llama-3.1-8b-instruct error 400: {\"error\":{\"message\":\"openrouter/meta-llama/llama-3.1-8b-instruct is not a valid model ID\",\"code\":400},\"user_id\":\"user_3CEmUHK8knVtAJw5PDGxqcQWWrG\"}"
+          },
+          {
+            "step": "goals_propose",
+            "error": "OpenRouter openrouter/meta-llama/llama-3.1-8b-instruct error 400: {\"error\":{\"message\":\"openrouter/meta-llama/llama-3.1-8b-instruct is not a valid model ID\",\"code\":400},\"user_id\":\"user_3CEmUHK8knVtAJw5PDGxqcQWWrG\"}"
+          }
+        ]
+      },
+      "ts": 1779142434080
+    }
+  ]
+}
