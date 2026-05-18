@@ -1,0 +1,141 @@
+{
+  "bootIso": "2026-05-18T21-46-43-336Z",
+  "role": "v2",
+  "cycle": 28,
+  "ts": 1779142739398,
+  "cycleRecord": {
+    "cycle": 28,
+    "agentRole": "v2",
+    "startedAt": 1779142706291,
+    "endedAt": 1779142739389,
+    "status": "completed",
+    "modelCalls": 1,
+    "totalTokens": 3101,
+    "totalCostUsd": 0.357324,
+    "actionInvoked": {
+      "name": "v2-local-actions.inbox_read",
+      "args": {
+        "N": 5
+      },
+      "resultSummary": "ERROR: {\"ok\":false,\"error\":\"email_unconfigured\",\"hint\":\"RUNNER_EMAIL_USER/PASS/IMAP_HOST/SMTP_HOST not set\"}"
+    },
+    "memoryWrites": 1,
+    "dataIngestEvents": 1
+  },
+  "events": [
+    {
+      "event": "prompt_assembled",
+      "data": {
+        "cycle": 28,
+        "agentRole": "v2",
+        "memoryRecallQuery": null,
+        "nonEmptyLayers": [
+          "laws",
+          "drives",
+          "capabilities"
+        ]
+      },
+      "ts": 1779142707029
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "c46d6570-ccb1-42ac-a81d-8a147802b56c",
+        "from": "queued",
+        "to": "running",
+        "timestamp": 1779142707029
+      },
+      "ts": 1779142707030
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 2244,
+        "completionTokens": 3662,
+        "cost": 0.01323,
+        "executionId": "c46d6570-ccb1-42ac-a81d-8a147802b56c",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-18T22:18:45.651Z"
+      },
+      "ts": 1779142725653
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 2280,
+        "completionTokens": 1534,
+        "cost": 0.006882,
+        "executionId": "c46d6570-ccb1-42ac-a81d-8a147802b56c",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-18T22:18:53.637Z"
+      },
+      "ts": 1779142733640
+    },
+    {
+      "event": "cost_request",
+      "data": {
+        "agentRole": "v2",
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+        "promptTokens": 2316,
+        "completionTokens": 785,
+        "cost": 0.004671,
+        "executionId": "c46d6570-ccb1-42ac-a81d-8a147802b56c",
+        "flowName": "primordial-cycle",
+        "userId": null,
+        "timestamp": "2026-05-18T22:18:58.847Z"
+      },
+      "ts": 1779142738849
+    },
+    {
+      "event": "execution_state_change",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "c46d6570-ccb1-42ac-a81d-8a147802b56c",
+        "from": "running",
+        "to": "complete",
+        "timestamp": 1779142738851
+      },
+      "ts": 1779142738854
+    },
+    {
+      "event": "execution_complete",
+      "data": {
+        "agentRole": "v2",
+        "executionId": "c46d6570-ccb1-42ac-a81d-8a147802b56c",
+        "state": "complete",
+        "result": {
+          "text": "{\n  \"action\": \"v2-local-actions.inbox_read\",\n  \"args\": {\"N\": 5},\n  \"reasoning\": \"Check inbox for new emails to react to, as reactivity is the dominant drive.\"\n}",
+          "model": "nvidia/nemotron-3-super-120b-a12b-20230311",
+          "provider": "openrouter",
+          "usage": {
+            "promptTokens": 2316,
+            "completionTokens": 785
+          }
+        },
+        "error": null
+      },
+      "ts": 1779142738857
+    },
+    {
+      "event": "adapter_tool_call",
+      "data": {
+        "agentRole": "v2",
+        "adapter": "v2-local-actions",
+        "tool": "inbox_read",
+        "durationMs": 0,
+        "success": true
+      },
+      "ts": 1779142738862
+    }
+  ]
+}
